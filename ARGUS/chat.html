@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>ARGUS AI Chat - Retinal Analysis</title>
+</head>
+<body class="chat-body">
+    <div class="container chat-container">
+        <nav>
+            <div class="nav_logo"><i class="ri-eye-2-line"></i> ARGUS</div>
+            <ul class="nav_links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="#">About Us</a></li>
+                <li class="link"><a href="#">Services</a></li>
+                <li class="link"><a href="#">Locations</a></li>
+                <li class="link"><a href="#">Know More</a></li>
+            </ul>
+        </nav>
+
+        <div class="chat-simplified">
+            <div class="chat-header">
+                <h1>ARGUS AI Retinal Analysis</h1>
+                <p>Upload a retinal scan to analyze for signs of diabetic retinopathy and other conditions</p>
+            </div>
+
+            <div class="chat-content">
+                <div class="upload-area">
+                    <div class="upload-container" id="dropzone">
+                        <i class="ri-image-add-line"></i>
+                        <h3>Upload Retinal Scan</h3>
+                        <p>Drag and drop your image here or click to browse</p>
+                        <span class="file-types">Supports JPG, PNG, TIFF up to 20MB</span>
+                        <input type="file" id="scan-upload" accept="image/*" class="file-input">
+                    </div>
+                    
+                    <div class="upload-options">
+                        <button class="option-btn samples">
+                            <i class="ri-image-line"></i>
+                            <span>Use Sample Image</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="analysis-area">
+                    <div class="analysis-header">
+                        <h2>Analysis Results</h2>
+                        <div class="analysis-actions">
+                            <button class="action-btn" title="Download Report">
+                                <i class="ri-file-download-line"></i>
+                            </button>
+                            <button class="action-btn" title="Print Results">
+                                <i class="ri-printer-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="scan-display">
+                        <div class="scan-placeholder">
+                            <i class="ri-eye-off-line"></i>
+                            <p>No scan uploaded yet</p>
+                        </div>
+                        <!-- Scan image will be displayed here -->
+                    </div>
+
+                    <div class="analysis-results">
+                        <div class="result-cards">
+                            <div class="result-card primary">
+                                <div class="card-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Diagnosis</h3>
+                                    <p class="awaiting">Waiting for scan upload</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <div class="card-icon">
+                                    <i class="ri-pulse-line"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h3>Confidence</h3>
+                                    <div class="confidence-meter">
+                                        <div class="meter-progress" style="width: 50%"></div>
+                                    </div>
+                                    <p class="awaiting">50%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ai-conversation">
+                            <div class="conversation-header">
+                                <h3><i class="ri-robot-line"></i> ARGUS AI Assistant</h3>
+                            </div>
+                            
+                            <div class="messages">
+                                <div class="message ai">
+                                    <p>Hello, I'm ARGUS AI. I can analyze your retinal scan for signs of diabetic retinopathy and other conditions. Please upload a clear image to begin.</p>
+                                </div>
+                                <!-- More messages will appear here after scan is analyzed -->
+                            </div>
+
+                            <div class="message-input">
+                                <input type="text" placeholder="Ask about your results..." disabled>
+                                <button>
+                                    <i class="ri-send-plane-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="capabilities-footer">
+                <div class="capability">
+                    <i class="ri-eye-line"></i>
+                    <span>Diabetic Retinopathy</span>
+                </div>
+                <div class="capability">
+                    <i class="ri-search-line"></i>
+                    <span>Eye Disease Detection</span>
+                </div>
+                <div class="capability">
+                    <i class="ri-pulse-line"></i>
+                    <span>Vascular Analysis</span>
+                </div>
+                <div class="capability">
+                    <i class="ri-dashboard-line"></i>
+                    <span>Macular Assessment</span>
+                </div>
+                <div class="capability">
+                    <i class="ri-file-chart-line"></i>
+                    <span>Detailed Reports</span>
+                </div>
+            </div>
+
+            <p class="disclaimer">ARGUS AI is a screening tool only. All results should be reviewed by a qualified healthcare professional.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
